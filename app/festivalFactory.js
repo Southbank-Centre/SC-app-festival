@@ -10,7 +10,7 @@
  */
 
 angular.module('SC-app-festival')
-  .factory('festivalFactory', function ($http, $rootScope, utilitiesFactory, angularMomentConfig, appConfig) {
+  .factory('festivalFactory', function ($http, $rootScope, $window, utilitiesFactory, angularMomentConfig, appConfig) {
 
     return {
 
@@ -38,13 +38,13 @@ angular.module('SC-app-festival')
               festival.field_date_end = utilitiesFactory.timestampSecondsToMS(festival.field_date_end);
 
               // Convert festival duration into array of days for use by events list filter
-              var s = moment(festival.field_date_start).tz(angularMomentConfig.timezone);
-              var e = moment(festival.field_date_end).tz(angularMomentConfig.timezone);
+              var s = $window.moment(festival.field_date_start).tz(angularMomentConfig.timezone);
+              var e = $window.moment(festival.field_date_end).tz(angularMomentConfig.timezone);
               var a = [];
 
               while (!s.isAfter(e)) {
                 a.push({
-                  'day' : moment(s)
+                  'day' : $window.moment(s)
                 });
                 s = s.add(1, 'days');
               }

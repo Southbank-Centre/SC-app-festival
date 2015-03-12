@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module('SC-app-festival').run(function ($rootScope, utilitiesFactory) {
+  .module('SC-app-festival').run(function ($rootScope, festivalFactory, utilitiesFactory) {
 
   	/**
      * Method for getting one festival from the API

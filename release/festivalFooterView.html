@@ -1,0 +1,32 @@
+<div class="festival-footer" ng-show="festivalFooter && festival">
+
+  <div class="footer-head-container">
+    <div class="container footer-head">
+    <div class="footer-festival-sponsor">Supported by<a ui-sref="wow.page({pageId: 'bloomberg-supports-wow-women-world-festival-303'})"><img src="/assets/imgs/bloomberg-logo.png" alt="Supported by Bloomberg" /></a></div>
+      <div class="footer-festival-dates" ng-style="{'color':festival.field_color_highlight}">Festival Dates: {{ festival.field_date_start | amDateFormat:'D' }} &ndash; {{ festival.field_date_end | amDateFormat:'D MMMM YYYY' }}</div>
+    </div>
+  </div>
+
+  <div class="footer-main-container">
+    <div class="container footer-main">
+      <div class="footer-subheading">
+        <h2 data-ng-bind-html="festivalFooter.field_subheading.value"></h2>
+      </div>
+
+      <div class="footer-element-container" ng-repeat="component in festivalFooter.field_component | betterLimitTo:4">
+
+        <div ng-if="component.bundle === 'component_list_link'" class="footer-element footer-list-link" ng-class="{'open': isOpen}" ng-init="isOpen = false" ng-click="isOpen = !isOpen">
+          <h3>{{ component.field_list_link.title }}</h3>
+          <div class="footer-element-body" ng-click="$event.stopPropagation()" link-list></div>
+        </div>
+
+        <div ng-if="component.bundle === 'html_block'" class="footer-element footer-html-block" ng-class="{'open': isOpen}" ng-init="isOpen = false" ng-click="isOpen = !isOpen">
+          <h3>{{ component.field_subtitle }}</h3>
+          <div class="footer-element-body" ng-click="$event.stopPropagation()" html-block></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
