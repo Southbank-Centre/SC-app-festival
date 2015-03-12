@@ -45,7 +45,7 @@ This adds an extra navigation bar into the header for navigating the festival.
 Add the following view to your app's **app** state:
 
     .state('app', {
-        url: '/',
+        url: '',
         views: {
             ...
             'festivalNav@app' : {
@@ -62,7 +62,7 @@ This adds an extra footer above the footer provided by the SC-app-footer module 
 Add the following view to your app's **app** state:
 
     .state('app', {
-        url: '/',
+        url: '',
         views: {
             ...
             'festivalFooter@app' : {
