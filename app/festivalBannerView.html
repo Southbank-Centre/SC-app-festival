@@ -1,0 +1,19 @@
+<div class="festival-banner hide-fade" ng-show="festival">
+
+  <header>
+
+    <div class="container">
+
+      <div class="festival-description-container" ng-style="{'background-color':festival.field_color_background, 'color':festival.field_color_text_highlight}">
+        <h2 class="festival-description-home" ng-show="festival.field_description.value" data-ng-bind-html="festival.field_description.value"></h2>
+      </div>
+
+    </div>
+
+    <img ng-src="{{festival.field_image_background.file.url}}" alt="" class="festival-img">
+
+    <a href="#home-components" du-smooth-scroll offset="120" scroll-position="scroll" ng-class="{hide: scroll > 50, show: scroll <= 50}" class="arrow-down"><img src="/assets/imgs/arrow-down.png" alt="Down arrow icon"></a>
+
+  </header>
+
+</div>
