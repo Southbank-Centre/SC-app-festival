@@ -8,7 +8,7 @@
  * Provides the app with the ability to display festival content and features
  */
 angular
-  .module('SC-app-festival');;'use strict';
+  .module('SC-app-festival', []);;'use strict';
 
 /**
  * @ngdoc controller
