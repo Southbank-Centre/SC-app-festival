@@ -48,7 +48,7 @@ Add the following view to your app's **app** state:
         url: '/',
         views: {
             ...
-            'festivalNav' : {
+            'festivalNav@app' : {
                 templateUrl: 'bower_components/SC-app-festival/release/festivalNavView.html'
               }
             ...
@@ -65,7 +65,7 @@ Add the following view to your app's **app** state:
         url: '/',
         views: {
             ...
-            'festivalFooter' : {
+            'festivalFooter@app' : {
                 templateUrl: 'bower_components/SC-app-festival/release/festivalFooterView.html'
               }
             ...
