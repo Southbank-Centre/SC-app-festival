@@ -17,12 +17,12 @@
 
         <div ng-if="component.bundle === 'component_list_link'" class="footer-element footer-list-link" ng-class="{'open': isOpen}" ng-init="isOpen = false" ng-click="isOpen = !isOpen">
           <h3>{{ component.field_list_link.title }}</h3>
-          <div class="footer-element-body" ng-click="$event.stopPropagation()" link-list></div>
+          <div class="footer-element-body" ng-click="$event.stopPropagation()" sc-link-list></div>
         </div>
 
         <div ng-if="component.bundle === 'html_block'" class="footer-element footer-html-block" ng-class="{'open': isOpen}" ng-init="isOpen = false" ng-click="isOpen = !isOpen">
           <h3>{{ component.field_subtitle }}</h3>
-          <div class="footer-element-body" ng-click="$event.stopPropagation()" html-block></div>
+          <div class="footer-element-body" ng-click="$event.stopPropagation()" sc-html-block></div>
         </div>
 
       </div>
