@@ -12,12 +12,16 @@ Replace n.n.n with the version number of this module that you require. See [the 
 *Please don't install without a release number or your app will be unstable.*
 
 ### Step 2
+
+Add **SC-app-event** to the dependency list in **[YourAppName].module.js**
+
+### Step 3
 Specify the following values in your app's **appConfig** constant:
 
 - festivalAlias
 - ticketingVocabularyId
 
-### Step 3
+### Step 4
 
 Install the optional features of this module.
 
@@ -40,7 +44,9 @@ Add the following view to your app's **app.home** state:
     
 #### Festival Navigation
 
-This adds an extra navigation bar into the header for navigating the festival.
+This adds an extra navigation bar into the header provided by the SC-app-header module and includes the festival's navigation.
+
+*This feature requires the [SC-app-header](https://github.com/Southbank-Centre/SC-app-header) module to be installed.*
 
 Add the following view to your app's **app** state:
 
@@ -58,6 +64,8 @@ Add the following view to your app's **app** state:
 #### Festival Footer
 
 This adds an extra footer above the footer provided by the SC-app-footer module and includes the festival's footer navigation.
+
+*This feature requires the [SC-app-footer](https://github.com/Southbank-Centre/SC-app-footer) module to be installed.*
 
 Add the following view to your app's **app** state:
 
