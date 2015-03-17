@@ -2,11 +2,10 @@
   "name": "SC-app-festival",
   "version": "0.0.0",
   "dependencies": {
-  	"angular": "~1.2.0",
-    "SC-app-utils": "Southbank-Centre/SC-app-utils#0.0.0",
-    "SC-app-content-components": "Southbank-Centre/SC-app-content-components#0.0.0",
-    "angular-moment": "~0.9.0",
-    "moment-timezone": "~0.3.0"
+    "angular": "~1.2.0",
+    "SC-app-utils": "Southbank-Centre/SC-app-utils",
+    "SC-app-content-components": "Southbank-Centre/SC-app-content-components",
+    "SC-app-page": "Southbank-Centre/SC-app-page"
   },
   "appPath": "app",
   "main": "./release/SC-app-festival.min.js",
