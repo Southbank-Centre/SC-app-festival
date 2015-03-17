@@ -2,6 +2,10 @@
 
 ## Installation
 
+### Step 0
+
+Check [this app's dependencies](https://github.com/Southbank-Centre/SC-app-festival/blob/master/bower.json) and make sure that you follow the installation instructions for the SC-app-* modules that this one depends on.
+
 ### Step 1
 Run the following command in your app's root directory.
 
@@ -13,7 +17,7 @@ Replace n.n.n with the version number of this module that you require. See [the 
 
 ### Step 2
 
-Add **SC-app-event** to the dependency list in **[YourAppName].module.js**
+Add **SC-app-festival** to the dependency list in **[YourAppName].module.js**
 
 ### Step 3
 Specify the following values in your app's **appConfig** constant:
@@ -31,15 +35,15 @@ This is the large hero image that appears at the top of the homepage with the fe
 
 Add the following view to your app's **app.home** state:
 
-	.state('app.home', {
-        url: '/',
-        views: {
-            ...
-            'festivalBanner@': {
-                templateUrl: 'bower_components/SC-app-festival/release/festivalBannerView.html'
-            }
-            ...
+    .state('app.home', {
+      url: '/',
+      views: {
+        ...
+        'festivalBanner@': {
+          templateUrl: 'bower_components/SC-app-festival/release/festivalBannerView.html'
         }
+        ...
+      }
     }
     
 #### Festival Navigation
@@ -51,14 +55,14 @@ This adds an extra navigation bar into the header provided by the SC-app-header 
 Add the following view to your app's **app** state:
 
     .state('app', {
-        url: '',
-        views: {
-            ...
-            'festivalNav@app' : {
-                templateUrl: 'bower_components/SC-app-festival/release/festivalNavView.html'
-              }
-            ...
+      url: '',
+      views: {
+        ...
+        'festivalNav@app' : {
+          templateUrl: 'bower_components/SC-app-festival/release/festivalNavView.html'
         }
+        ...
+      }
     }
     
 #### Festival Footer
@@ -70,12 +74,12 @@ This adds an extra footer above the footer provided by the SC-app-footer module 
 Add the following view to your app's **app** state:
 
     .state('app', {
-        url: '',
-        views: {
-            ...
-            'festivalFooter@app' : {
-                templateUrl: 'bower_components/SC-app-festival/release/festivalFooterView.html'
-              }
-            ...
+      url: '',
+      views: {
+        ...
+        'festivalFooter@app' : {
+          templateUrl: 'bower_components/SC-app-festival/release/festivalFooterView.html'
         }
+        ...
+      }
     }
