@@ -1,0 +1,220 @@
+.festival-nav-container {
+  
+  background-color:white;
+  border-bottom: 1px solid $light-grey;
+
+  .festival-header {
+    
+    position: relative;
+    height: 60px;
+    @include breakpoint($bp-tablet) {
+      height: 70px;
+    }
+    color: $white;
+    background-color: $dark-grey;
+
+    .festival-logo {
+      position: absolute;
+      top: -55px;
+      right: 10px;
+      background: none;
+      z-index:1;
+      img {
+        display: block;
+        height: 50px;
+        width: auto;
+        margin-left: 7px;
+      }
+      @include breakpoint($bp-desktop) {
+        position: relative;
+        @include span(2);
+        top: -5px;
+        img {
+          height: 130px;
+        }
+      }
+    }
+
+      
+    .festival-title {
+      padding: 10px 0 27px $padding;
+      @include breakpoint($bp-mobile) {
+        padding: 15px 0 12px $padding;
+      }
+      @include breakpoint($bp-tablet) {
+        padding: 15px 0 22px $padding;
+      }
+      @include breakpoint($bp-desktop) {
+        @include span(7);
+        padding: 15px 0 0;
+      }
+    }
+
+    .festival-date {
+      text-align: right;
+      padding: 8px $padding 8px 0;
+      color: $dark-grey;
+      margin-right: 120px; 
+      @include breakpoint($bp-desktop) {
+        @include span(3 last);
+        padding-top: 3px;
+        padding-bottom: 0;
+        margin-right: 0;
+        color: $white;
+      }
+    }
+
+  }
+
+  .festival-sponsor {
+    display: none;
+    clear: right;
+    text-align: right;
+    padding: 5px $padding 5px 0;
+    color: $dark-grey;
+    background-color: $dark-grey;
+    a, span {
+      vertical-align: bottom;
+      display: inline-block;
+      width: 95px;
+      height: 26px;
+      margin-left: 8px;
+      background: url(/assets/imgs/bloomberg-logo.png) no-repeat;
+      background-size: 100%;
+    }
+    @include breakpoint($bp-desktop) {
+      display: block;
+      @include span(3 last);
+      padding-top: 0;
+      color: $white;
+      background-color: transparent;
+      a, span {
+        background-image: url(/assets/imgs/bloomberg-logo-white.png);
+      }
+    }
+  }
+
+
+  .festival-nav {
+
+    background-color: $white;
+    height: 41px;
+    @include breakpoint($bp-desktop) {
+      overflow:hidden;
+    }
+
+    a {
+      background: $white;
+      color: $dark-grey;
+      padding-right: 0;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    nav {
+      @include span(9);
+      position: absolute;
+      z-index: 100;
+      top: 0;
+      left: 0;
+      height: 40px;
+      overflow: hidden;
+
+      @include breakpoint($bp-desktop) {
+        position: static;
+        padding: 0;
+        width: auto;
+        height: auto;
+        overflow: visible;
+      }
+
+      a {
+        display: block;
+        padding: $padding/4 $padding;
+        line-height: 1.5em;
+        @include breakpoint($bp-desktop) {
+          line-height: 2.5em;
+        }
+
+        &:last-of-type {
+          padding-bottom: $padding;
+        }
+        
+        @include breakpoint($bp-desktop) {
+          display: inline-block;
+          padding: 0;
+          margin-right: $margin*2;
+
+          &:last-of-type {
+            padding-bottom: 0;
+          }
+
+        }
+
+        &.active {
+          text-decoration: underline;
+          font-weight: bold;
+          letter-spacing: $header-letter-spacing;
+        }
+
+        &.hamburger {
+          cursor: pointer;
+          background: url('../imgs/mobile-burger.png') no-repeat center center;
+          padding: $padding;
+          margin-bottom: 1px;
+          height: 40px;
+          width: 60px;
+
+          @include breakpoint($bp-desktop) {
+            display: none;
+          }
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+        &.festival-sponsor {
+          text-align: left;
+          float: none; 
+          width: auto;
+          @include breakpoint($bp-desktop) {
+            display: none;
+          }
+          span { 
+            margin-top: -4px; 
+          }
+        }
+      }
+
+      &.navOpen {
+        height: auto;
+        overflow: visible;
+        width: 100%;
+        @include breakpoint($bp-desktop) {
+          width: auto;
+        }
+
+        a {
+          &.hamburger {
+            background-image: url('../imgs/mobile-x.png');
+          }
+
+        }
+      }
+    }
+
+    .twitter-hashtag {
+      @include span(2 of 12 last);
+      width: 120px;
+      padding: 0 $padding;
+      line-height: 2.5em;
+      text-align: right;
+      border-left: solid 1px $light-grey;
+    }
+
+  }
+
+}
