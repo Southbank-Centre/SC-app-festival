@@ -6,7 +6,7 @@
 
       <a ui-sref="app.home" class="festival-logo"><img ng-src="{{festival.field_image_logo_small.file.url}}" alt="{{festival.title}} Logo" ng-show="festival.field_image_logo_small.file.url" /></a>
 
-      <h2 class="festival-title">{{ festival.title }}</h2>
+      <h2 class="festival-title app-heading">{{ festival.title }}</h2>
       <div class="festival-date">{{ festival.field_date_start | amDateFormat:'D' }} &ndash; {{ festival.field_date_end | amDateFormat:'D MMMM YYYY' }}</div>
       <div class="festival-sponsor">Supported by<a ui-sref="app.pageSingle({pageAlias: 'bloomberg-supports-wow-women-world-festival-303'})" class="festival-sponsor"></a></div>
 
