@@ -125,7 +125,7 @@ angular.module('SC-app-festival')
 
         if (appConfig.festivalId) {
 
-          $http.get('/json/taxonomy_term.json?vocabulary=' + $rootScope.ticketingVocabularyId)
+          $http.get('/json/taxonomy_term.json?vocabulary=' + appConfig.ticketingVocabularyId)
             .success(callbackSuccess)
             .error(callbackError);
 
