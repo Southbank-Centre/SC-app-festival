@@ -17,8 +17,6 @@
 
   <div class="festival-nav" ng-show="festival" ng-init="navOpen = false">
 
-    <div class="container">
-
       <nav ng-class="{'navOpen':navOpen === true}">
         <a class="hamburger" ng-click="navOpen = !navOpen"></a>
         <a data-ng-repeat="navItem in festivalNav" ng-class="{active: isActiveNav(navItem.url)}" ng-href="{{ navItem.url }}">{{ navItem.title }}</a>
@@ -29,7 +27,6 @@
         #{{ festival.field_twitter_hashtag }}
       </a>
 
-    </div>
   </div>
 
 </div>

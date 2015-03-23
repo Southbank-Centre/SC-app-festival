@@ -101,6 +101,7 @@
     height: 41px;
     @include breakpoint($bp-desktop) {
       overflow:hidden;
+      @include span(2);
     }
 
     a {
