@@ -99,9 +99,6 @@
 
     background-color: $white;
     height: 41px;
-    @include breakpoint($bp-desktop) {
-      overflow:hidden;
-    }
 
     a {
       background: $white;
