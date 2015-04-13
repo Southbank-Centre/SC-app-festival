@@ -26,7 +26,6 @@
         position: absolute;
         z-index: 1;
         top: 10%;
-        background: none !important;
       }
       @include breakpoint($bp-small-desktop) {
         @include span(8);
@@ -35,15 +34,15 @@
         padding: $padding 0;
       }
 
-      .festival-description-home { 
-        a { 
-          color: inherit; 
-          text-decoration: none; 
-          border-bottom: 1px solid; 
+      .festival-description-home {
+        a {
+          color: inherit;
+          text-decoration: none;
+          border-bottom: 1px solid;
           &:hover {
             opacity: 0.5;
           }
-        }    
+        }
       }
 
     }
