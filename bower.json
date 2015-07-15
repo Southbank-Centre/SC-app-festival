@@ -1,14 +1,18 @@
 {
   "name": "SC-app-festival",
   "version": "0.2.0",
-  "dependencies": {
-    "angular": "~1.4.2",
-    "SC-app-utils": "Southbank-Centre/SC-app-utils#0.2.0",
-    "SC-app-content-components": "Southbank-Centre/SC-app-content-components#1.2.0",
-    "SC-app-page": "Southbank-Centre/SC-app-page#0.1.0"
-  },
+  "description": "Festival app for Southbank Centre website",
+  "authors": [
+    "Sam Murray <sam.murray@southbankcentre.co.uk>",
+    "Dave Vernon <dave.vernon@southbankcentre.co.uk>"
+  ],
   "appPath": "app",
   "main": "./release/SC-app-festival.min.js",
+  "keywords": [
+    "festival"
+  ],
+  "license": "MIT",
+  "private": true,
   "ignore": [
     "**/.*",
     "app",
@@ -17,5 +21,11 @@
     "package.json",
     "Gruntfile.js",
     "test"
-  ]
+  ],
+  "dependencies": {
+    "angular": "~1.4.2",
+    "SC-app-utils": "Southbank-Centre/SC-app-utils#0.2.0",
+    "SC-app-content-components": "Southbank-Centre/SC-app-content-components#1.2.0",
+    "SC-app-page": "Southbank-Centre/SC-app-page#0.1.0"
+  }
 }
